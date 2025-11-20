@@ -12,8 +12,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/auth", authRoutes);
+// 🔥 Todas las rutas dentro de /api
+app.use("/api/auth", authRoutes);
 app.use("/api/flavors", flavorsRoutes);
 
-// NO hacer app.listen() aquí
 export default app;
